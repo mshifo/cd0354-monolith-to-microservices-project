@@ -17,7 +17,14 @@ spec:
       containers:
       - image: shifo/udagram-api-user:v1
         name: backend-user
-        imagePullPolicy: Always                    
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "100m"
+          limits:
+            memory: "1024Mi"
+            cpu: "200m"                   
         env:
         - name: URL
           valueFrom:
