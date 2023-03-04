@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-             docker-compose -f docker-compose-build.yaml build --parallel
+             docker-compose build --parallel
       - deploy:
           name: Tag and Push application Docker image
           command: |
