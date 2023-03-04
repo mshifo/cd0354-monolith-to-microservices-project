@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-             docker-compose build --parallel
+             docker-compose build --force-rm --parallel
       - deploy:
           name: Tag and Push application Docker image
           command: |
